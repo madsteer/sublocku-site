@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SubLocKu — a brick-laying block puzzle for iPhone</title>
+<meta name="description" content="SubLocKu is a block puzzle for iPhone: lay bricks on a 9×9 board, clear rows, columns and boxes, and solve a new daily puzzle every day.">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="home">
+  <a class="brand" href="./"><img src="icon.png" alt=""><h1>SubLocKu</h1></a>
+  <p class="tagline">Lay the bricks. Clear the board.</p>
+</header>
+
+<main>
+
+<h2>About</h2>
+<p>SubLocKu is a block puzzle for iPhone with a landscaping twist. Drag brick pieces onto a 9×9 board of concrete. Fill a row, a column or one of the nine 3×3 boxes and it clears. The game ends when none of your pieces fit anywhere.</p>
+
+<h2>Two ways to play</h2>
+<div class="card">
+  <h3>Daily</h3>
+  <p>A new puzzle every day at midnight, your time. The board starts with special blocks already laid; clear the rows, columns and boxes they sit in to collect them all before you run out of room. Everyone gets the same puzzle, and you can retry as often as you like. A calendar lets you go back and play any day since January 1, 2026.</p>
+  <h3>Classic</h3>
+  <p>Play for as long as you can and chase a high score. SubLocKu keeps your all-time best and your best for the last day, week, month and year.</p>
+</div>
+
+<h2>Highlights</h2>
+<ul>
+  <li>Games in progress are saved, so you can stop and pick up later</li>
+  <li>One undo per move in Daily, for when a finger slips</li>
+  <li>Sounds and haptics, each of which can be turned off</li>
+  <li>No account, no sign-in: everything stays on your iPhone</li>
+</ul>
+
+<h2>Pricing</h2>
+<div class="card">
+  <p><strong>Free to play.</strong> The free version shows a full-screen ad between games, never during one.</p>
+  <p>To play without ads, subscribe in <em>Settings → Remove ads</em> inside the app:</p>
+  <ul>
+    <li>Monthly: <strong>$0.99 / month</strong></li>
+    <li>Yearly: <strong>$9.99 / year</strong> (save about 16%)</li>
+  </ul>
+  <p>The subscription only removes ads; every puzzle and mode is the same for everyone. It renews automatically and can be cancelled any time in <em>Settings → your name → Subscriptions</em> on your iPhone.</p>
+</div>
+
+<h2 id="support">Support</h2>
+<p>Found a bug or have an idea? The fastest way to reach us is to open an issue:</p>
+<p><a class="button" href="https://github.com/madsteer/sublocku-site/issues/new/choose">Report a bug or request a feature</a></p>
+
+<p>When reporting a bug, please include:</p>
+<ul>
+  <li>Your iPhone model and iOS version</li>
+  <li>The SubLocKu version (iPhone Settings → Apps → SubLocKu)</li>
+  <li>Whether it happened in Daily or Classic, and which day's puzzle</li>
+  <li>What you expected to happen and what actually happened</li>
+</ul>
+
+<p>For anything you'd rather not post publicly, such as a subscription problem, email:</p>
+<p>
+  <a id="support-email" href="#" rel="noopener">enable JavaScript to reveal</a>
+  <noscript>
+    Email hidden from spam bots. Open an issue instead, or copy the address from this image:
+    <img src="support-email.svg" alt="support email address" style="vertical-align: middle; height: 1.3em;">
+  </noscript>
+</p>
+<script>
+  (function () {
+    var local = 'sublocku_support';
+    var domain = ['madsteer', 'com'].join('.');
+    var addr = local + '@' + domain;
+    var el = document.getElementById('support-email');
+    el.href = 'mailto:' + addr;
+    el.textContent = addr;
+    el.removeAttribute('rel');
+  })();
+</script>
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<p><strong>When does the daily puzzle change?</strong><br>
+At midnight in your iPhone's time zone. Missed one? Pick any past day on the Daily calendar.</p>
+
+<p><strong>Where is my progress saved?</strong><br>
+Only on your iPhone. Deleting the app deletes your games, scores and daily results, and there is no way to restore them.</p>
+
+<p><strong>I subscribed but still see ads.</strong><br>
+Open <em>Settings → Remove ads</em> in the app and tap <em>Restore Purchases</em>, signed in with the Apple Account you subscribed with.</p>
+
+<p><strong>Is SubLocKu on iPad?</strong><br>
+Not yet; it's iPhone-only for now.</p>
+
+</main>
+
+<footer>
+  <p>© 2026 madsteer · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+</footer>
+
+</body>
+</html>

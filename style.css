@@ -1,0 +1,167 @@
+/* SubLocKu site: the app's brick-and-mortar look.
+   Brick red matches BoardPalette.brick (0.62, 0.23, 0.19) in the app. */
+:root {
+  color-scheme: dark;
+  --bg:      #17181b;   /* charcoal, like the app's background */
+  --surface: #222428;   /* dark panel */
+  --border:  #34373d;   /* mortar line */
+  --text:    #d9dbdf;
+  --muted:   #8d9199;
+  --heading: #f4f4f5;
+  --brick:   #9e3b30;
+  --brick-hi:#d0675a;   /* brick red lightened for links on dark */
+  --concrete:#5c6068;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* A thin course of bricks across the top of every page. */
+body::before {
+  content: "";
+  display: block;
+  height: 10px;
+  background:
+    repeating-linear-gradient(90deg, var(--brick) 0 46px, var(--bg) 46px 50px);
+}
+
+header, main, footer { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+header { padding-top: 48px; padding-bottom: 24px; }
+header.home { text-align: center; }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--heading);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.brand img { width: 40px; height: 40px; border-radius: 9px; }
+header.home .brand { flex-direction: column; gap: 16px; margin-bottom: 8px; }
+header.home .brand img { width: 112px; height: 112px; border-radius: 25px; box-shadow: 0 8px 24px rgb(0 0 0 / 0.45); }
+
+h1 { font-size: 40px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.02em; color: var(--heading); }
+.tagline { font-size: 20px; color: var(--muted); margin: 0; }
+.meta { font-size: 14px; color: var(--muted); margin: 0; }
+
+h2 { font-size: 26px; font-weight: 600; margin: 44px 0 12px; letter-spacing: -0.01em; color: var(--heading); }
+h3 { font-size: 19px; font-weight: 600; margin: 28px 0 8px; color: var(--heading); }
+
+p { margin: 0 0 16px; }
+ul, ol { padding-left: 22px; margin: 0 0 16px; }
+li { margin-bottom: 6px; }
+
+a { color: var(--brick-hi); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+
+.button {
+  display: inline-block;
+  background: var(--brick);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+.button:hover { text-decoration: none; filter: brightness(1.1); }
+
+/* Placeholders still to fill in before the site goes live. */
+mark.todo {
+  background: #5a4a12;
+  color: #ffe58a;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+footer {
+  padding: 40px 24px;
+  margin-top: 64px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+footer a { margin: 0 8px; }
+
+@media (max-width: 540px) {
+  h1 { font-size: 32px; }
+  header { padding-top: 32px; }
+}
+
+/* ── Policy pages: numbered sections, summary banner, data tables ── */
+.summary {
+  background: #2a1714;
+  border: 1px solid #5c2a23;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 8px 0 32px;
+}
+.summary strong { display: block; color: var(--heading); margin-bottom: 4px; }
+.summary p { margin: 0; }
+
+section { padding: 8px 0 28px; border-bottom: 1px solid var(--border); }
+section:last-of-type { border-bottom: none; }
+section h2 { margin-top: 4px; }
+
+.section-label {
+  font: 600 12px/1 ui-monospace, "SF Mono", Menlo, monospace;
+  letter-spacing: 0.12em;
+  color: var(--brick-hi);
+  margin-top: 28px;
+}
+
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 16px;
+  font-size: 15px;
+}
+table.data th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 6px 12px 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+table.data td {
+  vertical-align: top;
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+table.data tr:last-child td { border-bottom: none; }
+table.data td:first-child { color: var(--heading); font-weight: 500; }
+
+.callout {
+  border-left: 3px solid var(--brick);
+  background: var(--surface);
+  border-radius: 0 10px 10px 0;
+  padding: 12px 16px;
+  margin: 12px 0 16px;
+  font-size: 15px;
+}
+
+@media (max-width: 540px) {
+  table.data { font-size: 14px; }
+}
